@@ -14,3 +14,22 @@ IMC em adultos Condição:
 - Acima de 40 Obsesidade Grave;
 */
 
+function calculaIMC(peso, altura){
+    imc = peso / (altura * altura);
+    return imc
+}
+
+let imcCalculado = calculaIMC(60, 1.80);
+console.log(`IMC: ${imcCalculado}`);
+
+if(imcCalculado < 18.5){
+    console.log("Abaixo do peso");
+} else if(imcCalculado >= 18.5 && imcCalculado < 25){
+    console.log("Peso normal");
+} else if(imcCalculado >= 25 && imcCalculado < 30){
+    console.log("Acima do peso");
+} else if(imcCalculado >= 30 && imcCalculado < 40){
+    console.log("Obesidade");
+} else {
+    console.log("Obesidade grave");
+}
